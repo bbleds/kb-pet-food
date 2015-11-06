@@ -1,0 +1,21 @@
+#initial_select{
+	width: 60%;
+	margin-left: 20%;
+	border-radius: 5px;
+	padding: 30px; 
+	text-align: center;
+}
+
+.brand_name, .type_of_food, .vol_of_food{
+	border-bottom: 1px solid black;
+}
+
+.jumbotron p.type_of_food {
+	font-size: 4rem;
+	font-weight: bold;
+	text-align: left;
+}
+
+.jumbotron p.vol_of_food{
+	font-size: 3rem;
+}
