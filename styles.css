@@ -19,3 +19,12 @@
 .jumbotron p.vol_of_food{
 	font-size: 3rem;
 }
+
+.jumbotron p.type_of_formula{
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+#output{
+	display: none;
+}
