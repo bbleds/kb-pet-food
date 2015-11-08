@@ -17,28 +17,31 @@ $("#give_dog").click(function(){
 
 			console.log(data);
 			console.log("brandsssss", data.dog_brands);
+			var source = $("#dog-template").html();
+			var template = Handlebars.compile(source);
+			$("#output").html(template(data));
 
-			for (var x = 0; x < data.dog_brands.length; x++) {
+			// for (var x = 0; x < data.dog_brands.length; x++) {
 				
-				$("#output").append(
-					"<div class='jumbotron dog_brand_"+x+"' id='initial_select'>"+	
-						"<h1>"+data.dog_brands[x].name+"</h1>");
+			// 	$("#output").append(
+			// 		"<div class='jumbotron dog_brand_"+x+"' id='initial_select'>"+	
+			// 			"<h1>"+data.dog_brands[x].name+"</h1>");
 
-				for (var i = 0; i < data.dog_brands[x].types.length; i++) {
+			// 	for (var i = 0; i < data.dog_brands[x].types.length; i++) {
 					
-					$(".dog_brand_"+x).append("<p class='type_of_food'>"+data.dog_brands[x].types[i].type+"</p>");
+			// 		$(".dog_brand_"+x).append("<p class='type_of_food'>"+data.dog_brands[x].types[i].type+"</p>");
 
-					for (var n = 0; n < data.dog_brands[x].types[i].volumes.length; n++) {
-						$(".dog_brand_"+x).append("<p>"+data.dog_brands[x].types[n].volumes[n].name+
-							":  $"+data.dog_brands[x].types[n].volumes[n].price+"</p>");
+			// 		for (var n = 0; n < data.dog_brands[x].types[i].volumes.length; n++) {
+			// 			$(".dog_brand_"+x).append("<p>"+data.dog_brands[x].types[n].volumes[n].name+
+			// 				":  $"+data.dog_brands[x].types[n].volumes[n].price+"</p>");
 						
-					};
+			// 		};
 
-			};
+			// };
 
-			$("#output").append("</div>");
+			// $("#output").append("</div>");
 
-			};
+			// };
 
 
 		}); 
