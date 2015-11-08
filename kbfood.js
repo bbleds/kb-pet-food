@@ -17,8 +17,11 @@ $("#give_dog").click(function(){
 
 			console.log(data);
 			console.log("brandsssss", data.dog_brands);
+//Grab the html for the applicatble script tag in the HTML
 			var source = $("#dog-template").html();
+//Compile the template in that HTML using Handlebars
 			var template = Handlebars.compile(source);
+//pass the data into the template and out put in the appropriate html
 			$("#output").html(template(data));
 
 			// for (var x = 0; x < data.dog_brands.length; x++) {
